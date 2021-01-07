@@ -139,7 +139,7 @@ filter(kernel)의 구성에 따라 이미지의 특징을 뽑을 수 있다.
    
    ![structure](/images/17.PNG)
    
-   위 CNN 그래프에서 특이한 점중 하나는 Fully connected 네트워크와 Softmax 함수 중간에 Dropout layer (드롭아웃) 라는 계층이 있는 것을 볼 수 있는데 이는 overfitting을 막기위한 방법으로 뉴럴 네트워크가 학습중일 때 랜덤하게 뉴런을 없애서 학습을 방해함으로써 학습이 학습용 데이터에 치우지는 현상을 막는 역할을 한다.
+   위 CNN 그래프에서 특이한 점중 하나는 Fully connected  Softmax 함수 중간에 Dropout layer (드롭아웃) 라는 계층이 있는 것을 볼 수 있는데 이는 overfitting을 막기위한 방법으로 뉴럴 네트워크가 학습중일 때 랜덤하게 뉴런을 없애서 학습을 방해함으로써 학습이 학습용 데이터에 치우지는 현상을 막는 역할을 한다.
    
    **특징 추출 단계(feature extraction)**
    
@@ -169,6 +169,10 @@ filter(kernel)의 구성에 따라 이미지의 특징을 뽑을 수 있다.
    - CNN(Convolutional Neural Network)은 이미지의 공간 정보를 유지하면서 인접 이미지와의 특징을 효과적으로 인식하고 강조하는 방식으로 이미지의 특징을 추출하는 부분과 이미지를 분류하는  부분으로 구성된다. 
    
    - 특징 추출 영역은 Filter를 사용하여 공유 파라미터 수를 최소화하면서 이미지의 특징을 찾는 Convolution 레이어와 특징을 강화하고 모으는 Pooling 레이어로 구성된다.
+   
+   - 이미지의 특징을 추출하는 부분과 이미지를 분류하는 부분 사이에 이미지 형태의 데이터를 배열 형태로 만드는 Flatten 레이어인 Fully Connected 레이어가 존재한다.
+   
+   -  Fully connected 레이어와 Softmax 함수 중간에 Dropout layer (드롭아웃) 라는 계층이 있는 것을 볼 수 있는데 이는 overfitting(오버피팅)을 막기위한 방법이다.
    
    - CNN은 Filter의 크기, Stride, Padding과 Pooling 크기로 출력 데이터 크기를 조절하고, 필터의 개수로 출력 데이터의 채널을 결정한다.
    

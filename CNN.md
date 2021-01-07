@@ -126,13 +126,20 @@ filter(kernel)의 구성에 따라 이미지의 특징을 뽑을 수 있다.
    
    ![structure](/images/12.PNG)
    
+   ![structure](/images/16.PNG)
+   
    지금까지 CNN의 구성 요소들을 보았고 이는 CNN의 전체적인 구조 그림이다.
    
    CNN은 위 이미지와 같이 이미지의 특징을 추출하는 부분과 클래스를 분류하는 부분으로 나눌 수 있다. 특징 추출 영역은 Convolution Layer와 Pooling Layer를 여러 겹 쌓는 형태로 구성된다.
    
+   
    Convolution Layer는 input 데이터에 필터를 적용 후 활성화 함수를 반영하는 필수 요소이다. Convolution Layer 다음에 위치하는 Pooling Layer는 선택적인 레이어이다. 
    
-   CNN 마지막 부분에는 이미지 분류를 위한 Fully Connected 레이어가 추가된다. 이미지의 특징을 추출하는 부분과 이미지를 분류하는 부분 사이에 이미지 형태의 데이터를 배열 형태로 만드는      Flatten 레이어가 위치 한다.
+   CNN 마지막 부분에는 이미지 분류를 위한 Fully Connected 레이어가 추가된다. 이미지의 특징을 추출하는 부분과 이미지를 분류하는 부분 사이에 이미지 형태의 데이터를 배열 형태로 만드는 Flatten 레이어가 위치하는 것이다.
+   
+   ![structure](/images/17.NG)
+   
+   위 CNN 그래프에서 특이한 점중 하나는 Fully connected 네트워크와 Softmax 함수 중간에 Dropout layer (드롭아웃) 라는 계층이 있는 것을 볼 수 있는데 이는 overfitting을 막기위한 방법으로 뉴럴 네트워크가 학습중일 때 랜덤하게 뉴런을 없애서 학습을 방해함으로써 학습이 학습용 데이터에 치우지는 현상을 막는 역할을 한다.
    
    **특징 추출 단계(feature extraction)**
    

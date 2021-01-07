@@ -16,7 +16,7 @@ Convolutional Neural Network의 약자로 합성곱 신경망이라 부르며 �
  
  Convolution의 사전적 정의는 합성곱이다. 사실 Convolution은 처음 등장한 개념이 아니라 CNN이 등장하기 한참 전부터 이미지 처리에서 사용되었던 개념이다.
  
- ![Convolution](/images/1.PNG)
+ ![Convolution](/images/15.PNG)
 
 빨간 박스는 필터가 적용될 영역이고 stride(빨간색 박스인 filter를 몇칸씩 이동할 것인지)에 따라 이미지의 feature map가 만들어진다. 
 
@@ -63,6 +63,8 @@ filter(kernel)의 구성에 따라 이미지의 특징을 뽑을 수 있다.
    color이미지의 경우에는 다음 그림과 같이 처리된다.
    
    ![color](/images/8.PNG)
+   
+   ![color](/images/14.PNG)
    
    Multi Channel CNN에서 주의해서 보아야 할 점은 
    

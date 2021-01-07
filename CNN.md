@@ -128,6 +128,12 @@ filter(kernel)의 구성에 따라 이미지의 특징을 뽑을 수 있다.
    
    지금까지 CNN의 구성 요소들을 보았고 이는 CNN의 전체적인 구조 그림이다.
    
+   CNN은 위 이미지와 같이 이미지의 특징을 추출하는 부분과 클래스를 분류하는 부분으로 나눌 수 있다. 특징 추출 영역은 Convolution Layer와 Pooling Layer를 여러 겹 쌓는 형태로 구성된다.
+   
+   Convolution Layer는 input 데이터에 필터를 적용 후 활성화 함수를 반영하는 필수 요소이다. Convolution Layer 다음에 위치하는 Pooling Layer는 선택적인 레이어이다. 
+   
+   CNN 마지막 부분에는 이미지 분류를 위한 Fully Connected 레이어가 추가된다. 이미지의 특징을 추출하는 부분과 이미지를 분류하는 부분 사이에 이미지 형태의 데이터를 배열 형태로 만드는      Flatten 레이어가 위치 한다.
+   
    **특징 추출 단계(feature extraction)**
    
    - convolution layer - 필터를 통해 이미지의 특징을 추출
@@ -151,7 +157,15 @@ filter(kernel)의 구성에 따라 이미지의 특징을 뽑을 수 있다.
    - stride
    
   
+   # 요약
    
+   - CNN(Convolutional Neural Network)은 이미지의 공간 정보를 유지하면서 인접 이미지와의 특징을 효과적으로 인식하고 강조하는 방식으로 이미지의 특징을 추출하는 부분과 이미지를 분류하는 부
+   
+   분으로 구성된다. 
+   
+   - 특징 추출 영역은 Filter를 사용하여 공유 파라미터 수를 최소화하면서 이미지의 특징을 찾는 Convolution 레이어와 특징을 강화하고 모으는 Pooling 레이어로 구성된다.
+   
+   - CNN은 Filter의 크기, Stride, Padding과 Pooling 크기로 출력 데이터 크기를 조절하고, 필터의 개수로 출력 데이터의 채널을 결정한다.
    
    
  

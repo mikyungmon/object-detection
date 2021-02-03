@@ -10,6 +10,7 @@
 
         - build target 함수 구현
         - bbox_wh_iou 함수 구현
+        - bbox_ious 함수 구현
         - loss 구하기
         
         

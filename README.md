@@ -1,4 +1,4 @@
-# Object Detection 스터디 #
+# Object Detection #
 
 ![image](https://user-images.githubusercontent.com/66320010/107497449-f0609680-6bd5-11eb-8e78-1d01ea148e5d.png)
 
